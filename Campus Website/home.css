@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    
+}
+body{
+    background-color: #353535;
+}
+
+.logo{
+    max-width: 80px;
+    max-height: 80px;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #f2d047;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    position: sticky;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#nav li{
+    list-style: none;
+    padding: 0 30px;
+    position: relative;
+}
+
+#nav li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e1e1e;
+    transition: 1s ease;
+}
+
+#nav li a :hover,
+#nav li a.active{
+    color: #7eced6;
+}
+
+#nav li a.active ::after,
+#nav li a :hover ::after{ 
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #7eced6;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+.top-bar-items{
+    display: inline-block;
+    padding: 10px;
+}
+
+.header-bottom{
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.selectinput{
+    margin-left: 0;
+    padding: 10px;
+    width: 200px;
+}
+
+.search{
+    width: 300px;
+}
+
+.fa-magnifying-glass{
+    background-color: #002f34;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
