@@ -64,5 +64,5 @@ Welcome to the Campus E-commerce Website! This project is a full-stack web appli
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/campus-ecommerce-website.git
+   git clone https://github.com/eby0303/Campus-Website.git
    cd campus-ecommerce-website
