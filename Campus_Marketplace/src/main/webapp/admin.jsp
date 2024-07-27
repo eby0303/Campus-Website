@@ -60,14 +60,13 @@
                             String desc = resultSet.getString("productDesc");
                             String imagePath = resultSet.getString("imagePath");
 
-                            // Displaying in table rows
+                            // Displaying in table 
                             out.println("<tr>");
                             out.println("<td>" + id + "</td>");
                             out.println("<td>" + name + "</td>");
                             out.println("<td>" + price + "</td>");
                             out.println("<td>" + desc + "</td>");
                             out.println("<td>" + imagePath + "</td>");
-                            // Add a Remove button
                             out.println("<td><button class='remove-item' data-product-id='" + id + "'>Remove</button></td>");
                             out.println("</tr>");
                         }
@@ -92,7 +91,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Add a click event listener to all elements with class 'remove-item'
+            // event listener to all elements 'remove-item'
             document.querySelectorAll('.remove-item').forEach(function (button) {
                 button.addEventListener('click', function () {
                     // Get the product ID from the 'data-product-id' attribute
@@ -108,11 +107,11 @@
 
                     xhr.onload = function () {
                         if (xhr.status === 200) {
-                            // Product removed successfully, you can update the UI as needed
+                            // Product removed successfully
                             alert('Product removed successfully');
                             location.reload(); // Refresh the page for simplicity (you might want to update the UI dynamically)
                         } else {
-                            // Display an error message or handle the error accordingly
+                            // Display an error 
                             alert('Error removing product');
                         }
                     };
