@@ -35,7 +35,7 @@
                         <th>Price</th>
                         <th>Description</th>
                         <th>Image Path</th>
-                        <th>Action</th> <!-- New column for Remove button -->
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,10 +49,10 @@
                         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/login?useSSL=false", "root", "mysql0303");
                         statement = connection.createStatement();
 
-                        // Fetching product details from the database
+                        // Fetching product from the database
                         resultSet = statement.executeQuery("SELECT * FROM products");
 
-                        // Displaying product details in the table
+                        // Displaying product
                         while (resultSet.next()) {
                             int id = resultSet.getInt("productId");
                             String name = resultSet.getString("productName");
@@ -60,7 +60,7 @@
                             String desc = resultSet.getString("productDesc");
                             String imagePath = resultSet.getString("imagePath");
 
-                            // Displaying product details in the table rows
+                            // Displaying in table rows
                             out.println("<tr>");
                             out.println("<td>" + id + "</td>");
                             out.println("<td>" + name + "</td>");
@@ -89,7 +89,7 @@
         </div>
     </section>
     
-    <!-- Add this JavaScript code at the end of your JSP file, before the </body> tag -->
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Add a click event listener to all elements with class 'remove-item'
